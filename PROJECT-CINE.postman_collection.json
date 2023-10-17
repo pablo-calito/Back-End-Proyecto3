@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "6496b71b-91b8-4d80-84fd-d18645b61943",
+		"name": "PROJECT-CINE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30411397"
+	},
+	"item": [
+		{
+			"name": "ADD USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pablo\",\r\n    \"lastname\": \"Calito\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"pabloc@gmail.com\",\r\n    \"phoneNumber\": \"59725897\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE HALL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sala shiro 4k\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/hall/halls",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hall",
+						"halls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RESERV SEAT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hallId\": \"6529e30ca61f156b7e57b373\",\r\n    \"seats\": [\r\n        \"6529e2a5a61f156b7e57b30e\"\r\n    ]  \r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/hall/halls/reserve",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hall",
+						"halls",
+						"reserve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD MOVIE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movieName\": \"Avengers End Game\",\r\n  \"functions\": [\r\n    {\r\n      \"startTime\": \"2023-10-13T12:00:00Z\",\r\n      \"endTime\": \"2023-10-13T15:00:00Z\"\r\n    },\r\n    {\r\n      \"startTime\": \"2023-10-13T15:00:00Z\",\r\n      \"endTime\": \"2023-10-13T18:00:00Z\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/movie/movies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TICKETS FACT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": \"652a0f4d3a229a58be9cf823\",\r\n    \"movieId\": \"652a10523a229a58be9cf894\",\r\n    \"reservationSeatId\": \"652b5df645221b3ae5a0f3d4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/ticket/creatTicket",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ticket",
+						"creatTicket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SHOW USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/user/show",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VIEW SEATS AVA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/hall/seats/6529e30ca61f156b7e57b373",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"hall",
+						"seats",
+						"6529e30ca61f156b7e57b373"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VIEW TICKETS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/ticket/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ticket",
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VIEW MOVIES",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movie/viewmovies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"viewmovies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Marvin\",\r\n    \"lastname\": \"Luna\",\r\n    \"phoneNumber\": \"11112222\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/edit/65296c770b26f6228b1917ac",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"edit",
+						"65296c770b26f6228b1917ac"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE USER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/user/delete/65297498aad4c100a887879b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"delete",
+						"65297498aad4c100a887879b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE MOVIE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/movie/movies/652a0a11c5f836fe0fb7986d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"movie",
+						"movies",
+						"652a0a11c5f836fe0fb7986d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TICKETS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/ticket/tickets/ ",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"ticket",
+						"tickets",
+						" "
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Will\",\r\n    \"lastname\": \"Salas\",\r\n    \"password\": \"12345\",\r\n    \"email\": \"Will@gmail.com\",\r\n    \"phoneNumber\": 12345\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Will@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
